@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](https://github.com/howarddarryl55/Cloud-Security-Project/Diagram/Cloud_Screenshot_UT_Cyber_Security.png "Cloud Security Diagram")
+![alt text](Diagram/Cloud_Screenshot_UT_Cyber_Security.png "Cloud Security Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml files may be used to install only certain pieces of it, such as Filebeat.
 
