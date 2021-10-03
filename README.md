@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml files may be used to install only certain pieces of it, such as Filebeat.
 
-  - !(Ansible/install-elk.yml)
+[elk config](Ansible/install-elk.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -29,7 +29,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - *Metricbeat* records metrics from on going services on the server
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -51,10 +51,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | <redacted>           |
+| Jump Box | Yes                 | `[redacted]`         |
 | web 1    | No                  | N/a                  |
 | web 2    | No                  | N/a                  |
-| elkvm    | Yes                 | <redacted>           |
+| elkvm    | Yes                 | `[redacted]`         |
 
  
 ### Elk Configuration
@@ -82,9 +82,11 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
+  
 *Filebeat*:
 - monitors log files and log events
 - Example: program logs, system events, application updates
+  
 *Metricbeat*:
 - looks out for any resource usage on the host
 - Example: ram/cpu usage, storage space, network traffic
@@ -95,4 +97,4 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the ansible configuration file to run the playbooks.
 - Update the ansible host file to include ip addresses of webserver and elk hosts
-- Run the playbook, and navigate to the `http://<load balancer ip>/setup.php` to check that the installation worked as expected on the webservers and 'http://<elk ip>:5601/app/kibana` to check that the installation worked as expected on the elk server.
+- Run the playbook, and navigate to the `http://<load balancer ip>/setup.php` to check that the installation worked as expected on the webservers and `http://<elk ip>:5601/app/kibana` to check that the installation worked as expected on the elk server.
